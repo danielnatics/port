@@ -1,0 +1,435 @@
+:root {
+  --color-primary: #191d2b;
+  --color-secondary: #27ae60;
+  --color-white: #ffffff;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey-1: #dbe1e8;
+  --color-grey-2: #b2becd;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #2a2e35;
+  --color-grey-6: #12181b;
+  --br-sm-2: 14px;
+  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.light-mode {
+  --color-primary: #ffffff;
+  --color-secondary: #f56692;
+  --color-white: #454e56;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey-1: #6c7983;
+  --color-grey-2: #6c7983;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #f8f8f8;
+  --color-grey-6: #12181b;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #999;
+}
+/* general styles */
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #ff5000;
+}
+button:hover {
+  cursor: pointer;
+}
+/*end general styles */
+
+/* Beginning of Nav-bar */
+.nav-bar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: #555;
+  justify-content: space-between;
+  z-index: 1000;
+}
+.nav-bar h2 {
+  line-height: 60px;
+  padding-left: 10px;
+  font-size: 30px;
+  width: 15%;
+}
+.nav-bar button {
+  height: 50px;
+  width: 10%;
+  background-color: transparent;
+  border: 1px solid white;
+}
+.nav-bar button:hover {
+  background-color: white;
+}
+.nav-bar ul {
+  display: flex;
+  line-height: 60px;
+  width: 60%;
+  justify-content: space-between;
+}
+.nav-bar ul li {
+}
+.nav-bar ul li a {
+  padding-right: 5px;
+  font-size: 22px;
+  color: white;
+}
+/* end of Nav-bar */
+
+/* side-bar beginning */
+.menu-bar {
+  position: fixed;
+  top: -193px;
+  text-align: left;
+  padding: 20px 0;
+  background-color: #555;
+  visibility: hidden;
+  transition: all 0.3s linear;
+  z-index: 500;
+  width: 100%;
+}
+.menu-bar ul li {
+  padding-bottom: 15px;
+  margin-left: 20px;
+}
+.menu-bar ul li a {
+  font-family: sans-serif;
+  font-size: 23px;
+  font-weight: 200;
+  color: white;
+  cursor: pointer;
+  opacity: 0.7;
+  width: 100%;
+  display: block;
+}
+/* side-bar ending */
+
+.image {
+  width: 500px;
+}
+
+/* section-1 beginning */
+.section-1 {
+  margin-top: 110px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: arial;
+}
+.section-1 h1 {
+  margin-bottom: 20px;
+  font-size: 38px;
+}
+.section-1 p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.section-1 button {
+  width: 60%;
+  padding: 15px 0;
+  border-radius: 10px;
+  margin: 0 auto 30px auto;
+}
+.section-1 button a {
+  font-size: 18px;
+  width: 100%;
+  display: block;
+}
+
+/* end of section 1 */
+.img-box {
+  width: 100%;
+}
+.img-box .image {
+  display: block;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(0.8);
+}
+.img-box .image:hover {
+  filter: grayscale(0);
+}
+
+/* beginning of section 2 */
+.section-2 {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: arial;
+}
+.section-2 h1 {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+.section-2 .skills {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.section-2 .skill-volume {
+  height: 25px;
+  width: 100%;
+  background-color: rgb(0, 0, 210, 0.5);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.section-2 .skill-percentage {
+  height: 100%;
+  background-color: blue;
+  border-radius: inherit;
+  padding: 0px 13px;
+}
+.section-2 .skill-percentage p {
+  margin: 2px 2px;
+  font-weight: 800;
+  color: #bebebe;
+}
+/* end of section 2 */
+
+/* beginning of section 3 */
+.section-3 {
+  width: 90%;
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: arial;
+  margin-bottom: 70px;
+}
+.portfolios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+.portfolios .portfolio-item {
+  position: relative;
+  border-radius: 15px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.portfolios .portfolio-item .image {
+  width: 100%;
+}
+.portfolios .portfolio-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.portfolios .portfolio-item .hover-items {
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s ease-in-out;
+}
+.portfolios .portfolio-item .hover-items a {
+  font-size: 1.2rem;
+  background-color: #ffffff;
+  color: black !important;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+.portfolios .portfolio-item .hover-items a:hover {
+  background-color: #191d2b;
+}
+.portfolios .portfolio-item .hover-items .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolios .portfolio-item .hover-items .icons .icon {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.portfolios .portfolio-item .hover-items .icons .icon i {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin: 0 1rem;
+}
+.portfolios .portfolio-item .hover-items .icons .icon:hover {
+  background-color: var(--color-white);
+}
+.portfolios .portfolio-item .hover-items .icons .icon:hover i {
+  color: var(--color-primary);
+}
+
+.portfolio-item:hover .hover-items {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* screen size for mobile portrait */
+@media (max-width: 500px) {
+  /* nav bar for mobile view potrait */
+  .nav-bar {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+
+    background-color: #555;
+    justify-content: none;
+    z-index: 1000;
+    overflow: hidden;
+  }
+  .nav-bar ul {
+    display: flex;
+    line-height: 60px;
+    width: 0%;
+    justify-content: space-between;
+    /* visibility: hidden; */
+    display: none;
+  }
+  .nav-bar h2 {
+    line-height: 60px;
+    padding-left: 10px;
+    font-size: 30px;
+  }
+  .nav-bar button {
+    height: 60px;
+    width: 100px;
+    background-color: transparent;
+    margin-right: 30px;
+  }
+  /* end nav bar for mobile view potrait */
+
+  /* section 1 beginning */
+  .section-1 button {
+    width: 80%;
+    padding: 15px 0;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    border: none;
+  }
+  .section-1 button a {
+    font-size: 14px;
+    width: 100%;
+    display: block;
+    color: black;
+  }
+  /* section 1 end */
+
+  /* section 2 beginning */
+  .section-2 .skill-volume {
+    height: 16px;
+    width: 100%;
+    background-color: rgb(0, 0, 210, 0.5);
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .section-2 .skill-percentage p {
+    font-weight: 400;
+    width: 100%;
+    height: 100%;
+  }
+
+  .image img {
+    width: 300px;
+    height: 200px;
+  }
+
+  /* section3 */
+  .portfolios {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 7rem;
+  }
+}
+
+/* .grids {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  grid-gap: 10px;
+  grid-template-areas:
+    "gridlock gridlock gridlock "
+    "gridlockp gridlockp gridlockp "
+    "grid1 grid2 grid3"
+    "grid4 grid5 grid6"
+    "grid7 grid5 grid9";
+}
+.gride {
+  width: 300px;
+  height: 350px;
+  background-color: #444;
+}
+
+.gridh2 {
+  grid-area: gridlock;
+}
+.gridp {
+  grid-area: gridlockp;
+}
+.grid1 {
+  grid-area: grid1;
+}
+.grid2 {
+  grid-area: grid2;
+}
+.grid3 {
+  grid-area: grid3;
+}
+.grid4 {
+  grid-area: grid4;
+}
+.grid5 {
+  grid-area: grid5;
+}
+.grid6 {
+  grid-area: grid6;
+}
+.grid7 {
+  grid-area: grid7;
+}
+.grid8 {
+  grid-area: grid8;
+}
+.grid9 {
+  grid-area: grid9;
+} */
